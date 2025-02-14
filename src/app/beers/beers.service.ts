@@ -11,9 +11,6 @@ import { environment } from '../../../environment/environment';
 export class BeersService {
   private http = inject(HttpClient);
 
-  constructor() {
-    console.log('url:', `${environment.api}`);
-  }
   public getBeers(): Observable<Beer[]> {
     return this.http.get<Beer[]>(`${environment.api}`);
   }
@@ -37,6 +34,6 @@ export class BeersService {
   }
 
   public GetBeerById(id: string): Observable<Beer | undefined> {
-    return this.http.get<Beer>(`${environment.api}/{id}`);
+    return this.http.get<Beer>(`${environment.api}/${id}`);
   }
 }

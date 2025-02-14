@@ -1,25 +1,32 @@
 {
   "beers": [
     {
-      "id": 0,
+      "id": "0",
       "name": "Camden Hells",
       "description": "A pilsner",
       "rating": 4,
       "price": 2.5
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "Heineken",
       "description": "A lager",
       "rating": 5,
       "price": 3.5
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Fosters",
       "price": "2",
       "description": "Oz Beer",
       "rating": "3"
+    },
+    {
+      "id": 0,
+      "name": "Fosters",
+      "price": "2",
+      "description": "Oz Beer",
+      "rating": "2"
     }
   ]
 }
