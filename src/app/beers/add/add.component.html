@@ -1,0 +1,25 @@
+<div>
+  <h2>Add Beer</h2>
+  <form [formGroup]="beerForm" (ngSubmit)="addBeer()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" />
+    </div>
+
+    <div>
+      <label for="rating">Rating:</label>
+      <input type="text" id="rating" formControlName="rating" />
+    </div>
+
+    <div>
+      <label for="price">Price:</label>
+      <input type="text" id="price" formControlName="price" />
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" id="description" formControlName="description" />
+    </div>
+
+    <button type="submit" [disabled]="beerForm.invalid">Add Beer</button>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Description</td>
+      <td>Price</td>
+      <td>Rating</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let beer of beers">
+      <td>
+        <a routerLink="/beers/{{ beer.id }}">{{ beer.id }}</a>
+      </td>
+      <td>{{ beer.name }}</td>
+      <td>{{ beer.description }}</td>
+      <td>{{ beer.price }}</td>
+      <td>{{ beer.rating }}</td>
+    </tr>
+  </tbody>
+</table>
