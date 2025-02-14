@@ -1,4 +1,4 @@
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <td>Id</td>
@@ -9,9 +9,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let beer of beers">
+    <tr *ngFor="let beer of beers$ | async">
       <td>
-        <a routerLink="/beers/{{ beer.id }}">{{ beer.id }}</a>
+        <a routerLink="/beers/{{ beer.id }}" class="btn btn-success">{{
+          beer.id
+        }}</a>
       </td>
       <td>{{ beer.name }}</td>
       <td>{{ beer.description }}</td>

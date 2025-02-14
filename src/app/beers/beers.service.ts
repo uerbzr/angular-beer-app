@@ -1,20 +1,42 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { Beer } from '../models/beer';
 import { BEERS } from '../data/beers';
+import { environment } from '../../../environment/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BeersService {
-  public beers: Beer[] = BEERS;
+  private http = inject(HttpClient);
 
-  public AddBeer(beer: Beer): void {
-    this.beers.push(beer);
+  constructor() {
+    console.log('url:', `${environment.api}`);
   }
-  GetBeerById(id: number): Observable<Beer | undefined> {
-    const beer = this.beers.find((b) => b.id === id);
-    return of(beer);
+  public getBeers(): Observable<Beer[]> {
+    return this.http.get<Beer[]>(`${environment.api}`);
+  }
+
+  public AddBeer(beer: Beer) {
+    this.http.post(`${environment.api}`, beer).subscribe((response: any) => {
+      console.log('Server response:', response);
+    });
+  }
+  public updateBeer(beer: Beer): void {
+    this.http
+      .put(`${environment.api}/${beer.id}`, beer)
+      .subscribe((response: any) => {
+        console.log('Server response:', response);
+      });
+  }
+  public deleteBeer(id: string) {
+    this.http.delete(`${environment.api}/${id}`).subscribe((response: any) => {
+      console.log('Server response:', response);
+    });
+  }
+
+  public GetBeerById(id: string): Observable<Beer | undefined> {
+    return this.http.get<Beer>(`${environment.api}/{id}`);
   }
 }
