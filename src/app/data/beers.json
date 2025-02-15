@@ -13,6 +13,13 @@
       "price": "3",
       "description": "A pilsner from London",
       "rating": "10"
+    },
+    {
+      "id": "600d",
+      "name": "Doom Bar",
+      "price": "3",
+      "description": "Refreshing IPA named after some sand in the sea",
+      "rating": "7"
     }
   ]
 }
