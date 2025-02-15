@@ -1,3 +1,11 @@
 {
-  "beers": []
+  "beers": [
+    {
+      "name": "Stella",
+      "price": "4",
+      "description": "Strong beer from Belgium",
+      "rating": 1,
+      "id": "cb7a"
+    }
+  ]
 }

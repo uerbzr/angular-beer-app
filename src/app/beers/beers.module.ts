@@ -6,9 +6,10 @@ import { ViewComponent } from './view/view.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
-  declarations: [ListComponent, AddComponent, ViewComponent],
+  declarations: [ListComponent, AddComponent, ViewComponent, EditComponent],
   imports: [CommonModule, ReactiveFormsModule, RouterModule, HttpClientModule],
   exports: [AddComponent, ListComponent, ViewComponent],
 })

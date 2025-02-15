@@ -1,0 +1,16 @@
+<h2>Edit Beer</h2>
+<form [formGroup]="beerForm" (ngSubmit)="updateBeer()">
+  <label>Name:</label>
+  <input type="text" formControlName="name" required />
+
+  <label>Price:</label>
+  <input type="number" formControlName="price" required />
+
+  <label>Description:</label>
+  <textarea formControlName="description" required></textarea>
+
+  <label>Rating:</label>
+  <input type="number" formControlName="rating" min="1" max="5" required />
+
+  <button type="submit" [disabled]="beerForm.invalid">Update</button>
+</form>

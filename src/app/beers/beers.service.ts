@@ -38,4 +38,7 @@ export class BeersService {
   public deleteSingleBeer(id: string): Observable<void> {
     return this.http.delete<void>(`${environment.api}/${id}`);
   }
+  public updateSingleBeer(beer: Beer): Observable<Beer> {
+    return this.http.put<Beer>(`${environment.api}/${beer.id}`, beer);
+  }
 }

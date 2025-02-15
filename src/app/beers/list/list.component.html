@@ -17,6 +17,7 @@
       <td>
         <a routerLink="/beers/{{ beer.id }}" class="btn btn-success">Details</a>
         <a (click)="onDeleteBeer(beer.id!)" class="btn btn-danger">Delete</a>
+        <a routerLink="/beers/edit/{{ beer.id }}" class="btn btn-info">Edit</a>
       </td>
     </tr>
   </tbody>
