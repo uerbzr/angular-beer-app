@@ -1,16 +1,16 @@
-# AngularBeerRouteWorkshop
+# Angular Beer Application
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
 
-## Development server
+## Setup
 
-To start a local development server, run:
+- after forking/cloning run `npm install`
 
-```bash
-ng serve
-```
+## Running
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- inside the src/app/beers/data directory run `json-server --watch beers.json`
+- To start a local development server, run `ng serve`
+- Navigate to `http://localhost:4200/`.
 
 ## Code scaffolding
 
@@ -19,6 +19,33 @@ Angular CLI includes powerful code scaffolding tools. To generate a new componen
 ```bash
 ng generate component component-name
 ```
+
+## To create this project
+
+- ng generate module layout
+- ng generate component layout/menu
+- ng generate module beers
+- ng generate service beers
+- ng generate component beers/add
+- ng generate component beers/edit
+- ng generate component beers/list
+- ng generate component beers/view
+
+## Additional Packages
+
+- `npm install bootstrap` and modified a section in the angular.json file:
+
+```json
+ "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
+```
+
+## Help
 
 For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
