@@ -8,8 +8,8 @@
       <div *ngIf="beer; else loading">
         <h2>{{ beer.name }}</h2>
         <p>{{ beer.description }}</p>
-        <p>Rating: {{ beer.rating }}</p>
-        <p>Price: {{ beer.price }}</p>
+        <p>Rating: {{ Rate(beer.rating) }}</p>
+        <p>Price: £{{ beer.price }}</p>
 
         <button routerLink="/beers" class="btn btn-danger">Back to List</button>
       </div>

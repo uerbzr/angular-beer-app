@@ -55,6 +55,13 @@
       "price": "3",
       "description": "Porter",
       "rating": "5"
+    },
+    {
+      "id": "8dbd",
+      "name": "Carlsberg",
+      "price": "1",
+      "description": "Danish Kindness Pilsner",
+      "rating": "4"
     }
   ]
 }

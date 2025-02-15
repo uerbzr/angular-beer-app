@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BeersService } from '../beers.service';
 import { ActivatedRoute } from '@angular/router';
 import { Beer } from '../../models/beer';
+import { UsefulService } from '../useful.service';
 
 @Component({
   selector: 'app-view',
@@ -15,7 +16,8 @@ export class ViewComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private beerService: BeersService
+    private beerService: BeersService,
+    private usefulService: UsefulService
   ) {}
 
   ngOnInit(): void {
@@ -25,5 +27,8 @@ export class ViewComponent implements OnInit {
       console.log(data);
       this.beer = data!;
     });
+  }
+  public Rate(rating: number): string {
+    return this.usefulService.Rate(rating);
   }
 }

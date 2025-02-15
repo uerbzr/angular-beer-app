@@ -4,6 +4,7 @@ import { Beer } from '../../models/beer';
 import { BeersService } from '../beers.service';
 import { Observable } from 'rxjs';
 import { environment } from '../../../../environment/environment';
+import { UsefulService } from '../useful.service';
 @Component({
   selector: 'app-list',
   standalone: false,
@@ -13,7 +14,10 @@ import { environment } from '../../../../environment/environment';
 export class ListComponent implements OnInit {
   beers$ = new Observable<Beer[]>();
 
-  constructor(private readonly beerService: BeersService) {
+  constructor(
+    private readonly beerService: BeersService,
+    private readonly usefulService: UsefulService
+  ) {
     console.log('url:', `${environment.api}`);
   }
   ngOnInit(): void {
@@ -28,11 +32,7 @@ export class ListComponent implements OnInit {
     this.beerService.deleteBeer(String(id));
   }
   public Rate(rating: number): string {
-    let stars = '';
-    for (let i = 0; i < rating; i++) {
-      stars += '⭐';
-    }
-    return stars;
+    return this.usefulService.Rate(rating);
   }
   public onDeleteBeer(id: string) {
     if (confirm('Are you sure you want to delete this beer?')) {
