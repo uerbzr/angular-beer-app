@@ -4,7 +4,7 @@
       "name": "Stella",
       "price": "4",
       "description": "Strong beer from Belgium",
-      "rating": 2,
+      "rating": 1,
       "id": "cb7a"
     },
     {
@@ -48,6 +48,13 @@
       "price": "1",
       "description": "Creamy bitter",
       "rating": "3"
+    },
+    {
+      "id": "88cb",
+      "name": "Oslo Brewing",
+      "price": "3",
+      "description": "Porter",
+      "rating": "5"
     }
   ]
 }
