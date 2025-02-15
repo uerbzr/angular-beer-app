@@ -41,6 +41,13 @@
       "description": "English lager",
       "rating": 1,
       "id": "489e"
+    },
+    {
+      "id": "b9b8",
+      "name": "John Smith",
+      "price": "1",
+      "description": "Creamy bitter",
+      "rating": "3"
     }
   ]
 }
