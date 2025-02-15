@@ -4,22 +4,43 @@
       "name": "Stella",
       "price": "4",
       "description": "Strong beer from Belgium",
-      "rating": 2,
+      "rating": 5,
       "id": "cb7a"
     },
     {
-      "id": "2419",
       "name": "Camden Hells",
       "price": "3",
       "description": "A pilsner from London",
-      "rating": "10"
+      "rating": 5,
+      "id": "2419"
     },
     {
-      "id": "600d",
       "name": "Doom Bar",
       "price": "3",
       "description": "Refreshing IPA named after some sand in the sea",
-      "rating": "7"
+      "rating": 5,
+      "id": "600d"
+    },
+    {
+      "id": "5f8e",
+      "name": "Becks",
+      "price": "4",
+      "description": "German beer in a small bottle",
+      "rating": "4"
+    },
+    {
+      "id": "255d",
+      "name": "Fruhli",
+      "price": "4",
+      "description": "Strawberry beer from Belgium",
+      "rating": "5"
+    },
+    {
+      "name": "Carling",
+      "price": "3",
+      "description": "English lager",
+      "rating": 1,
+      "id": "489e"
     }
   ]
 }

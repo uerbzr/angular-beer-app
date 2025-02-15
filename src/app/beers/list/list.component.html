@@ -1,24 +1,32 @@
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <td>Name</td>
-      <td>Description</td>
-      <td>Price</td>
-      <td>Rating</td>
-      <td></td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let beer of beers$ | async">
-      <td>{{ beer.name }}</td>
-      <td>{{ beer.description }}</td>
-      <td>£{{ beer.price }}</td>
-      <td>{{ Rate(beer.rating) }}</td>
-      <td>
-        <a routerLink="/beers/{{ beer.id }}" class="btn btn-success">Details</a>
-        <a (click)="onDeleteBeer(beer.id!)" class="btn btn-danger">Delete</a>
-        <a routerLink="/beers/edit/{{ beer.id }}" class="btn btn-info">Edit</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Price</td>
+        <td>Rating</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let beer of beers$ | async">
+        <td>{{ beer.name }}</td>
+        <td>{{ beer.description }}</td>
+        <td>£{{ beer.price }}</td>
+        <td>{{ Rate(beer.rating) }}</td>
+        <td>
+          <a routerLink="/beers/{{ beer.id }}" class="btn btn-sm btn-success"
+            >Details</a
+          >
+          <a routerLink="/beers/edit/{{ beer.id }}" class="btn btn-sm btn-info"
+            >Edit</a
+          >
+          <a (click)="onDeleteBeer(beer.id!)" class="btn btn-sm btn-danger"
+            >Delete</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

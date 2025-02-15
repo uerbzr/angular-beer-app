@@ -1,12 +1,19 @@
-<div *ngIf="beer; else loading">
-  <h2>{{ beer.name }}</h2>
-  <p>{{ beer.description }}</p>
-  <p>Rating: {{ beer.rating }}</p>
-  <p>Price: {{ beer.price }}</p>
-
-  <button routerLink="/beers" class="btn btn-danger">Back to List</button>
-</div>
-
 <ng-template #loading>
   <p>Loading beer details...</p>
 </ng-template>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2"></div>
+    <div class="col-md-auto">
+      <div *ngIf="beer; else loading">
+        <h2>{{ beer.name }}</h2>
+        <p>{{ beer.description }}</p>
+        <p>Rating: {{ beer.rating }}</p>
+        <p>Price: {{ beer.price }}</p>
+
+        <button routerLink="/beers" class="btn btn-danger">Back to List</button>
+      </div>
+    </div>
+    <div class="col col-lg-2"></div>
+  </div>
+</div>
