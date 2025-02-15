@@ -1,11 +1,3 @@
 {
-  "beers": [
-    {
-      "id": "9e1d",
-      "name": "Fosters",
-      "price": "4",
-      "description": "Oz Beer",
-      "rating": "3"
-    }
-  ]
+  "beers": []
 }

@@ -27,9 +27,9 @@ export class ListComponent implements OnInit {
   public deleteBeer(id: number): void {
     this.beerService.deleteBeer(String(id));
   }
-  public onDeleteBeer(id: number) {
+  public onDeleteBeer(id: string) {
     if (confirm('Are you sure you want to delete this beer?')) {
-      this.beerService.deleteSingleBeer(String(id)).subscribe(() => {
+      this.beerService.deleteSingleBeer(id).subscribe(() => {
         this.beers$ = this.beerService.getBeers(); //this.beers$.filter((beer) => beer.id !== id);
       });
     }
