@@ -16,6 +16,7 @@
       <td>{{ beer.rating }}</td>
       <td>
         <a routerLink="/beers/{{ beer.id }}" class="btn btn-success">Details</a>
+        <a (click)="onDeleteBeer(1)" class="btn btn-danger">Delete</a>
       </td>
     </tr>
   </tbody>

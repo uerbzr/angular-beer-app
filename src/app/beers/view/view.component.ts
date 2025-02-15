@@ -11,7 +11,7 @@ import { Beer } from '../../models/beer';
 })
 export class ViewComponent implements OnInit {
   beer: Beer | null = null;
-  beerId: number | null = null;
+  beerId: string | null = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -19,7 +19,7 @@ export class ViewComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.beerId = Number(this.route.snapshot.paramMap.get('id'));
+    this.beerId = this.route.snapshot.paramMap.get('id');
     console.log(this.beerId);
     this.beerService.GetBeerById(String(this.beerId)).subscribe((data) => {
       console.log(data);

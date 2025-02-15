@@ -2,7 +2,6 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { Beer } from '../models/beer';
-import { BEERS } from '../data/beers';
 import { environment } from '../../../environment/environment';
 
 @Injectable({
@@ -27,7 +26,7 @@ export class BeersService {
         console.log('Server response:', response);
       });
   }
-  public deleteBeer(id: string) {
+  public deleteBeer(id: string): void {
     this.http.delete(`${environment.api}/${id}`).subscribe((response: any) => {
       console.log('Server response:', response);
     });
@@ -35,5 +34,8 @@ export class BeersService {
 
   public GetBeerById(id: string): Observable<Beer | undefined> {
     return this.http.get<Beer>(`${environment.api}/${id}`);
+  }
+  public deleteSingleBeer(id: string): Observable<void> {
+    return this.http.delete<void>(`${environment.api}/${id}`);
   }
 }

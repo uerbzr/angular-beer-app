@@ -26,7 +26,7 @@ export class AddComponent {
   }
   addBeer(): void {
     const newBeer: Beer = {
-      id: 0,
+      id: undefined,
       name: this.beerForm.value.name,
       price: this.beerForm.value.price,
       description: this.beerForm.value.description,
