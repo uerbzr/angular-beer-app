@@ -27,6 +27,13 @@ export class ListComponent implements OnInit {
   public deleteBeer(id: number): void {
     this.beerService.deleteBeer(String(id));
   }
+  public Rate(rating: number): string {
+    let stars = '';
+    for (let i = 0; i < rating; i++) {
+      stars += '⭐';
+    }
+    return stars;
+  }
   public onDeleteBeer(id: string) {
     if (confirm('Are you sure you want to delete this beer?')) {
       this.beerService.deleteSingleBeer(id).subscribe(() => {

@@ -12,8 +12,8 @@
     <tr *ngFor="let beer of beers$ | async">
       <td>{{ beer.name }}</td>
       <td>{{ beer.description }}</td>
-      <td>{{ beer.price }}</td>
-      <td>{{ beer.rating }}</td>
+      <td>£{{ beer.price }}</td>
+      <td>{{ Rate(beer.rating) }}</td>
       <td>
         <a routerLink="/beers/{{ beer.id }}" class="btn btn-success">Details</a>
         <a (click)="onDeleteBeer(beer.id!)" class="btn btn-danger">Delete</a>
