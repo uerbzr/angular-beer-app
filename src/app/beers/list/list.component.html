@@ -1,4 +1,4 @@
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <td>Id</td>
@@ -11,7 +11,11 @@
   <tbody>
     <tr *ngFor="let beer of beers">
       <td>
-        <a routerLink="/beers/{{ beer.id }}">{{ beer.id }}</a>
+        <a routerLink="/beers/{{ beer.id }}" class="btn btn-primary">
+          <span class="badge">
+            {{ beer.id }}
+          </span>
+        </a>
       </td>
       <td>{{ beer.name }}</td>
       <td>{{ beer.description }}</td>
