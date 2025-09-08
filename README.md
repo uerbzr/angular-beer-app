@@ -1,4 +1,34 @@
-# AngularBeerRouteWorkshop
+# Angular Beer Route Workshop
+
+
+-How was this built?
+
+npm install -g @angular/cli
+ng new first-app --no-standalone
+
+ng generate service beers
+
+ng generate module beers
+ng generate component beers/add
+ng generate component beers/view
+ng generate component beers/list
+
+
+ng generate module layout
+ng generate component layout/menu
+
+Order of Build:
+
+- run above `ng serve`
+- arrange app-routing.module.ts
+- should be able to see menu and navigate around site!
+- create model folder with a beer interface
+- create data folder with an array of beers!
+- add beers array to beers.service.ts, importing - the beer interface, beer data collection
+- list component: import car service into here and fill a Pets array property with it . Setup constructor correctly
+- create add in service to add to beers array and - make id increment
+- create FORM !
+
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
 
